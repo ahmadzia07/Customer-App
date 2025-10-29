@@ -8,6 +8,8 @@ async function fetchEmployees() {
   const tableBody = document.getElementById("employeeTableBody");
   tableBody.innerHTML = "";
 
+
+  
   data.data.forEach(emp => {
     const row = document.createElement("tr");
     row.innerHTML = `
