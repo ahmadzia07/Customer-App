@@ -9,9 +9,13 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class Database:
+
+
+
     def __init__(self):
         self.config = Config()
         self.connection = None
+        
         
     def connect(self):
         """Establish connection to PostgreSQL database"""
@@ -28,6 +32,7 @@ class Database:
         except psycopg2.Error as e:
             logger.error(f"Error connecting to database: {e}")
             raise
+            
             
     def disconnect(self):
         """Close database connection"""
