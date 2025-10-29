@@ -3,6 +3,7 @@ from psycopg2.extras import RealDictCursor
 from config import Config
 import logging
 
+
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
