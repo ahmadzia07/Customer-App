@@ -33,7 +33,7 @@ class Database:
             logger.error(f"Error connecting to database: {e}")
             raise
             
-            
+
     def disconnect(self):
         """Close database connection"""
         if self.connection:
@@ -62,6 +62,7 @@ class Database:
         - INSERT/UPDATE/DELETE without RETURNING return affected rowcount
         - Any statement with RETURNING returns a list of rows
         """
+        #any
         try:
             cursor = self.get_cursor()
             cursor.execute(query, params)
