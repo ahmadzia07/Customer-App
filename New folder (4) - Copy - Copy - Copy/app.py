@@ -19,6 +19,8 @@ def get_db_connection():
 # ------------------------
 # 🔸 LOGIN ROUTES
 # ------------------------
+
+
 @app.route('/')
 def home():
     if 'user' in session:
