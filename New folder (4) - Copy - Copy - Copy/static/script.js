@@ -19,6 +19,9 @@ function toast(message, type = 'ok') {
 }
 
 async function fetchJSON(url, options) {
+    options = Object.assign({}, options);
+    // By default, send same-origin credentials (cookies) so HttpOnly JWT cookie is included.
+    if (!options.credentials) options.credentials = 'same-origin';
     const res = await fetch(url, options);
     const data = await res.json().catch(() => ({}));
     if (!res.ok) {
