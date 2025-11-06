@@ -84,6 +84,9 @@ def test_postgres_connection():
             print("Failed:", e)
             continue
 
+
+        
+
     print("\nCould not find a database containing public.employees.")
     print("- Ensure the table exists (schema 'public', name 'employees')")
     print("- Or update .env DB_NAME to the database shown in pgAdmin that holds this table")
