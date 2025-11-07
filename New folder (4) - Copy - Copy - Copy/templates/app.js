@@ -1,4 +1,6 @@
-const API_URL = "http://127.0.0.1:5000/employees";
+// Use a relative path so same-origin cookies are sent automatically. Change to an absolute
+// URL if your frontend is hosted separately — then ensure fetch uses credentials:'include'.
+const API_URL = "/employees";
 
 // Fetch all employees
 async function fetchEmployees() {
